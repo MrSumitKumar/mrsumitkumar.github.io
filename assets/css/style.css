@@ -354,7 +354,8 @@ h6 {
   }
   #hero .social-links a{
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 10px;
+    background-color: lightskyblue;
   }
 }
 
