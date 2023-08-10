@@ -332,7 +332,7 @@ h6 {
 
   #hero .container {
     margin: 0;
-    padding-left: 15px;
+    padding-left: 8px;
     width: 350px;
     height: 200px;
 
@@ -342,6 +342,7 @@ h6 {
     font-size: 30px;
     line-height: 10px;
     font-weight: 700;
+    letter-spacing: -1px;
 
   }
 
@@ -351,7 +352,7 @@ h6 {
     letter-spacing: -1px;
 
   }
-  #hero .social-links {
+  #hero .social-links a{
     margin-top: 5px;
     font-size: 20px;
   }
