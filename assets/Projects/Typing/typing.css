@@ -38,7 +38,7 @@
   position: relative;
 }
 .typing-text p span.correct{
-  color: #56964f;
+  color: blue;
 }
 .typing-text p span.incorrect{
   color: #cb3439;
@@ -47,7 +47,7 @@
   border-radius: 4px;
 }
 .typing-text p span.active{
-  color: #17A2B8;
+  color: aqua;
 }
 .typing-text p span.active::before{
   position: absolute;
@@ -58,7 +58,7 @@
   left: 0;
   opacity: 0;
   border-radius: 5px;
-  background: #17A2B8;
+  background: aqua;
   animation: blink 1s ease-in-out infinite;
 }
 @keyframes blink{

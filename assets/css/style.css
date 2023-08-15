@@ -611,7 +611,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: #ffffff;
+  color: black;
   font-size: 50px;
   display: inline-block;
   transition: 0.3s;
