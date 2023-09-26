@@ -87,8 +87,8 @@
    */
   on('click', '.mobile-nav-toggle', function(e) {
     select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('fa-xmark')
-    this.classList.toggle('fa-bars')
+    this.classList.toggle('bi-x')
+    this.classList.toggle('bi-list')
   })
 
   /**
@@ -120,15 +120,7 @@
     }
   });
 
-  /**
-   * Preloader
-   */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
+
 
   /**
    * Hero type effect
