@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="hi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>संपर्क करें | सुमित कुमार — ग्राम प्रधान अभ्यर्थी</title>
+    <link rel="icon" href="./mr-image.jpg">
+    <meta name="author" content="सुमित कुमार">
+    <meta name="description"
+        content="संपर्क करें — सुमित कुमार, ग्राम प्रधान अभ्यर्थी। अपनी समस्या साझा करें या अभियान से जुड़ें।">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#047857' }
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans Devanagari"', 'system-ui']
+                }
+            }
+        }
+    </script>
+    <script src="js/components.js" defer></script>
+    <style>
+        body {
+            font-family: Noto Sans Devanagari, system-ui, -apple-system, sans-serif
+        }
+
+        .mobile-menu {
+            transform: translateY(-10px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.25s ease;
+        }
+
+        .mobile-menu.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+    <site-header class="fixed inset-x-0 top-0 z-50 bg-white shadow-sm transition-all duration-300 ease-in-out">
+    </site-header>
+    <main class="pt-24">
+        <!-- Page Header -->
+        <section class="bg-gray-50 py-8 text-center border-b border-gray-100">
+            <h1 class="text-3xl font-bold text-gray-900">संपर्क करें और जुड़ें</h1>
+            <p class="mt-2 text-gray-600">आपके सुझाव, शिकायत और समर्थन के लिए</p>
+        </section>
+
+        <!-- Contact Info -->
+        <section id="contact" class="max-w-6xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="tel:+919690946501" class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center">📞
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">फोन करें</p>
+                        <p class="font-semibold text-gray-800">+91 9690946501</p>
+                    </div>
+                </a>
+                <a href="https://wa.me/919690946501" class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-green-50 text-green-600 flex items-center justify-center">💬
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">WhatsApp</p>
+                        <p class="font-semibold text-gray-800">हमें संदेश भेजें</p>
+                    </div>
+                </a>
+                <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                        🌾</div>
+                    <div>
+                        <p class="text-sm text-gray-500">चुनाव चिह्न</p>
+                        <p class="font-semibold text-gray-800">अनाज ओसला किसान</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Suggestion Box -->
+        <section id="complaint-box" class="py-12 bg-amber-50">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="bg-amber-500 px-6 py-4">
+                        <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                            <span>📮</span> समस्या पेटी / सुझाव
+                        </h2>
+                        <p class="text-amber-50 text-sm">आपकी आवाज़ सीधे हम तक</p>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <p class="text-gray-600 mb-6 text-sm">
+                            गाँव में कोई समस्या है या आपके पास विकास के लिए कोई सुझाव है? हमें बताएं।
+                            आप चाहें तो बिना नाम बताए भी अपनी बात रख सकते हैं।
+                        </p>
+                        <form onsubmit="event.preventDefault(); alert('आपका सुझाव/शिकायत दर्ज कर ली गई है। धन्यवाद!');"
+                            class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">नाम (वैकल्पिक)</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none"
+                                        placeholder="आपका नाम">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">मोबाइल
+                                        (वैकल्पिक)</label>
+                                    <input type="tel"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none"
+                                        placeholder="संपर्क नंबर">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">विषय</label>
+                                <select
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none bg-white">
+                                    <option>सफाई व्यवस्था</option>
+                                    <option>पेयजल समस्या</option>
+                                    <option>राशन वितरण</option>
+                                    <option>सड़क / नाली निर्माण</option>
+                                    <option>अन्य सुझाव</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">विवरण</label>
+                                <textarea rows="4" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none"
+                                    placeholder="अपनी बात विस्तार से लिखें..."></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-amber-600 text-white font-bold py-3 rounded-lg hover:bg-amber-700 transition shadow-md">
+                                भेजें
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer Form -->
+        <section id="join" class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-10">
+                    <span class="bg-green-100 text-green-700 font-semibold px-3 py-1 rounded-full text-sm">मुहीम से
+                        जुड़ें</span>
+                    <h2 class="text-3xl font-bold text-gray-900 mt-2">स्वयंसेवक बनें (Volunteer)</h2>
+                    <p class="mt-3 text-gray-600">
+                        गाँव के विकास में अपना योगदान दें। हमारे चुनाव अभियान का हिस्सा बनें।
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+                    <form
+                        onsubmit="event.preventDefault(); alert('धन्यवाद! आपकी जानकारी दर्ज कर ली गई है। हम जल्द ही आपसे संपर्क करेंगे।');"
+                        class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">पूरा नाम</label>
+                                <input type="text" id="name" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
+                                    placeholder="आपका नाम">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">मोबाइल
+                                    नंबर</label>
+                                <input type="tel" id="phone" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
+                                    placeholder="98765xxxxx">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="ward" class="block text-sm font-medium text-gray-700 mb-1">वार्ड /
+                                मोहल्ला</label>
+                            <input type="text" id="ward"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
+                                placeholder="आपके मोहल्ले का नाम">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">सुझाव या संदेश
+                                (वैकल्पिक)</label>
+                            <textarea id="message" rows="3"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
+                                placeholder="आप किस प्रकार सहयोग करना चाहते हैं?"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit"
+                                class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold shadow-md transition-all hover:shadow-lg w-full sm:w-auto">
+                                शामिल हों
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="text-xs text-center text-gray-500 mt-4">
+                            आपकी जानकारी सुरक्षित रहेगी और केवल अभियान के लिए उपयोग की जाएगी।
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <site-footer></site-footer>
+    </main>
+
+    <!-- ================= FLOATING ACTION BUTTONS ================= -->
+    <floating-buttons></floating-buttons>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="hi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>गैलरी | सुमित कुमार — ग्राम प्रधान अभ्यर्थी</title>
+    <link rel="icon" href="./mr-image.jpg">
+    <meta name="author" content="सुमित कुमार">
+    <meta name="description" content="सुमित कुमार — ग्राम पंचायत अभियान की तस्वीरें और वीडियो झलकियां।">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#047857' }
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans Devanagari"', 'system-ui']
+                }
+            }
+        }
+    </script>
+    <script src="js/components.js" defer></script>
+    <style>
+        body {
+            font-family: Noto Sans Devanagari, system-ui, -apple-system, sans-serif
+        }
+
+        .mobile-menu {
+            transform: translateY(-10px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.25s ease;
+        }
+
+        .mobile-menu.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .tab-btn.active {
+            background-color: #047857;
+            /* green-700 */
+            color: white;
+            border-color: #047857;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+    <site-header class="fixed inset-x-0 top-0 z-50 bg-white shadow-sm transition-all duration-300 ease-in-out">
+    </site-header>
+
+    <main class="pt-24 min-h-screen">
+
+        <!-- Page Header -->
+        <section class="bg-gray-50 py-10 text-center border-b border-gray-100">
+            <h1 class="text-3xl font-bold text-gray-900">मीडिया गैलरी</h1>
+            <p class="mt-2 text-gray-600 max-w-xl mx-auto">
+                हमारी यात्रा, जनसंपर्क और विकास कार्यों से जुड़ी तस्वीरें और वीडियो।
+            </p>
+
+            <!-- TABS -->
+            <div class="flex justify-center gap-4 mt-8">
+                <button onclick="switchTab('photos')" id="btn-photos"
+                    class="tab-btn active px-6 py-2 rounded-full border border-green-600 text-green-700 font-semibold transition-all hover:bg-green-50">
+                    📸 तस्वीरें (Photos)
+                </button>
+                <button onclick="switchTab('videos')" id="btn-videos"
+                    class="tab-btn px-6 py-2 rounded-full border border-gray-300 text-gray-600 font-semibold transition-all hover:bg-gray-100 hover:text-gray-900">
+                    ▶️ वीडियो (Videos)
+                </button>
+            </div>
+        </section>
+
+        <!-- Content Area -->
+        <section class="py-12 max-w-6xl mx-auto px-6">
+
+            <!-- PHOTOS GRID -->
+            <div id="photos-grid"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-fade">
+                <div class="col-span-full text-center py-12 text-gray-500">
+                    तस्वीरें लोड हो रही हैं...
+                </div>
+            </div>
+
+            <!-- VIDEOS GRID -->
+            <div id="videos-grid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade">
+                <!-- Videos will be loaded here via JS -->
+            </div>
+
+        </section>
+
+        <!-- ================= MEDIA MODAL ================= -->
+        <div id="media-modal"
+            class="fixed inset-0 z-[100] hidden bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm transition-all duration-300 opacity-0 transform scale-95"
+            aria-modal="true" role="dialog">
+            <!-- Close Button -->
+            <button id="close-modal"
+                class="absolute top-6 right-6 text-white text-5xl font-bold hover:text-gray-300 focus:outline-none z-50 transition-colors">&times;</button>
+
+            <!-- Modal Content Container -->
+            <div id="modal-content" class="relative w-full max-w-5xl max-h-[90vh] flex items-center justify-center">
+                <!-- Media will be injected here -->
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <site-footer></site-footer>
+
+    </main>
+
+    <script>
+        // Modal Elements
+        const modal = document.getElementById('media-modal');
+        const modalContent = document.getElementById('modal-content');
+        const closeModalBtn = document.getElementById('close-modal');
+        const body = document.body;
+
+        // Gallery Tabs Logic
+        function switchTab(tabName) {
+            const photosGrid = document.getElementById('photos-grid');
+            const videosGrid = document.getElementById('videos-grid');
+            const btnPhotos = document.getElementById('btn-photos');
+            const btnVideos = document.getElementById('btn-videos');
+
+            if (tabName === 'photos') {
+                photosGrid.classList.remove('hidden');
+                videosGrid.classList.add('hidden');
+
+                // Update buttons
+                btnPhotos.classList.add('active');
+                btnPhotos.classList.remove('border-gray-300', 'text-gray-600');
+                btnPhotos.classList.add('border-green-600', 'text-green-700');
+
+                btnVideos.classList.remove('active');
+                btnVideos.classList.add('border-gray-300', 'text-gray-600');
+            } else {
+                photosGrid.classList.add('hidden');
+                videosGrid.classList.remove('hidden');
+
+                // Update buttons
+                btnVideos.classList.add('active');
+                btnVideos.classList.remove('border-gray-300', 'text-gray-600');
+
+                btnPhotos.classList.remove('active');
+                btnPhotos.classList.add('border-gray-300', 'text-gray-600');
+            }
+        }
+
+        // --- MODAL LOGIC ---
+        function openModal(content) {
+            modalContent.innerHTML = content;
+            modal.classList.remove('hidden');
+            // Small delay for transition
+            requestAnimationFrame(() => {
+                modal.classList.remove('opacity-0', 'scale-95');
+                modal.classList.add('opacity-100', 'scale-100');
+            });
+            body.classList.add('overflow-hidden'); // Prevent background scroll
+        }
+
+        function closeModal() {
+            modal.classList.remove('opacity-100', 'scale-100');
+            modal.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalContent.innerHTML = ''; // Stop video playback
+                body.classList.remove('overflow-hidden');
+            }, 300);
+        }
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close on click outside (backdrop)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+
+        // Load Gallery Data
+        document.addEventListener('DOMContentLoaded', async () => {
+            const photosGrid = document.getElementById('photos-grid');
+            const videosGrid = document.getElementById('videos-grid');
+
+            try {
+                const response = await fetch('data/gallery.json');
+                if (!response.ok) throw new Error('Failed to load gallery data');
+                const data = await response.json();
+
+                // Render Photos
+                if (data.images && data.images.length > 0) {
+                    photosGrid.innerHTML = ''; // Clear loading
+                    data.images.forEach(img => {
+                        const card = document.createElement('div');
+                        card.className = 'group relative overflow-hidden rounded-xl shadow-md cursor-pointer hover:shadow-xl transition-all aspect-[4/3] bg-gray-200';
+                        card.innerHTML = `
+                        <img src="${img.src}" alt="${img.caption}" class="w-full h-full object-cover transition-transform group-hover:scale-110">
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity flex items-end h-full">
+                            <p class="text-white text-sm font-semibold">${img.caption}</p>
+                        </div>
+                    `;
+                        // Click Event for Image
+                        card.addEventListener('click', () => {
+                            openModal(`<img src="${img.src}" class="max-w-full max-h-[85vh] rounded shadow-2xl">`);
+                        });
+                        photosGrid.appendChild(card);
+                    });
+                } else {
+                    photosGrid.innerHTML = '<div class="col-span-full text-center text-gray-500">कोई तस्वीर उपलब्ध नहीं है।</div>';
+                }
+
+                // Render Videos
+                if (data.videos && data.videos.length > 0) {
+                    // videosGrid default content is empty, just append
+                    videosGrid.innerHTML = '';
+                    data.videos.forEach(vid => {
+                        const card = document.createElement('div');
+                        card.className = 'bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 cursor-pointer';
+                        card.innerHTML = `
+                     <div class="relative bg-gray-900 aspect-video flex items-center justify-center group">
+                         <img src="${vid.thumbnail}" alt="${vid.title}" class="w-full h-full object-cover opacity-60">
+                         <div class="absolute inset-0 flex items-center justify-center">
+                             <div class="text-5xl text-white opacity-90 group-hover:scale-110 transition-transform">▶️</div>
+                         </div>
+                         <p class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">${vid.duration}</p>
+                     </div>
+                     <div class="p-4">
+                         <h3 class="font-bold text-gray-900 line-clamp-2">${vid.title}</h3>
+                         <p class="mt-1 text-sm text-gray-500">${vid.date}</p>
+                     </div>
+                   `;
+
+                        // Click Event for Video
+                        card.addEventListener('click', (e) => {
+                            let embedContent = '';
+                            // Simple check for YouTube
+                            if (vid.url.includes('youtube.com') || vid.url.includes('youtu.be')) {
+                                let videoId = '';
+                                if (vid.url.includes('v=')) {
+                                    videoId = vid.url.split('v=')[1].split('&')[0];
+                                } else if (vid.url.includes('youtu.be/')) {
+                                    videoId = vid.url.split('youtu.be/')[1];
+                                }
+
+                                if (videoId) {
+                                    embedContent = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full aspect-video rounded-lg shadow-2xl max-h-[80vh]"></iframe>`;
+                                }
+                            } else {
+                                // Assume generic video file
+                                embedContent = `<video controls autoplay class="w-full max-h-[85vh] rounded shadow-2xl"><source src="${vid.url}" type="video/mp4">Browser does not support video.</video>`;
+                            }
+
+                            if (embedContent) openModal(embedContent);
+                        });
+
+                        videosGrid.appendChild(card);
+                    });
+                } else {
+                    videosGrid.innerHTML = '<div class="col-span-full text-center text-gray-500">कोई वीडियो उपलब्ध नहीं है।</div>';
+                }
+
+
+            } catch (err) {
+                console.error(err);
+                photosGrid.innerHTML = '<div class="col-span-full text-center text-red-500">तस्वीरें लोड करने में समस्या हुई।</div>';
+                videosGrid.innerHTML = '<div class="col-span-full text-center text-red-500">वीडियो लोड करने में समस्या हुई।</div>';
+            }
+        });
+    </script>
+
+    <!-- ================= FLOATING ACTION BUTTONS ================= -->
+    <floating-buttons></floating-buttons>
+
+</body>
+
+</html>

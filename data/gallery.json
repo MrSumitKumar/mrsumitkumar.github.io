@@ -1,0 +1,50 @@
+{
+    "images": [
+        {
+            "caption": "जनसंपर्क अभियान 1 - गाँव के बुज़ुर्गों के साथ",
+            "src": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        },
+        {
+            "caption": "युवा संवाद बैठक - क्रिकेट टूर्नामेंट का उद्घाटन",
+            "src": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        },
+        {
+            "caption": "स्कूल भ्रमण - बच्चों को स्टेशनरी वितरण",
+            "src": "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        },
+        {
+            "caption": "चौपाल चर्चा - किसानों की समस्याएं सुनते हुए",
+            "src": "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+    ],
+    "videos": [
+        {
+            "title": "मेरी प्राथमिकताएं - सुमित कुमार का साक्षात्कार",
+            "date": "जनवरी 15, 2026",
+            "duration": "03:45",
+            "thumbnail": "https://images.unsplash.com/photo-1557992260-ec58e38d396c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+            "url": "https://www.youtube.com/watch?v=ScMzIvxBSi4"
+        },
+        {
+            "title": "पुस्तकालय योजना की घोषणा - युवाओं के लिए खुशखबरी",
+            "date": "जनवरी 20, 2026",
+            "duration": "01:20",
+            "thumbnail": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+            "url": "https://www.youtube.com/watch?v=ScMzIvxBSi4"
+        },
+        {
+            "title": "नुक्कड़ सभा - कौरारा बुजुर्ग में जोरदार स्वागत",
+            "date": "फरवरी 02, 2026",
+            "duration": "05:10",
+            "thumbnail": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+            "url": "https://www.youtube.com/watch?v=ScMzIvxBSi4"
+        },
+        {
+            "title": "महिला सशक्तिकरण पर विशेष संबोधन",
+            "date": "फरवरी 10, 2026",
+            "duration": "02:30",
+            "thumbnail": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+            "url": "https://www.youtube.com/watch?v=ScMzIvxBSi4"
+        }
+    ]
+}

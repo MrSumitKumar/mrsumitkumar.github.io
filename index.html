@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>सुमित कुमार — ग्राम प्रधान अभ्यर्थी</title>
-  <meta name="description" content="सुमित कुमार — ग्राम प्रधान (कौड़ारा बुजुर्ग, जसराना, फिरोजाबाद)। विकास के लिए वचन।">
+  <link rel="icon" href="./mr-image.jpg">
+  <meta name="author" content="सुमित कुमार">
+  <meta name="description" content="सुमित कुमार — ग्राम प्रधान (कौरारा बुजुर्ग, जसराना, फिरोजाबाद)। विकास के लिए वचन।">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
@@ -22,6 +24,7 @@
       }
     }
   </script>
+  <script src="js/components.js" defer></script>
   <style>
     body {
       font-family: Noto Sans Devanagari, system-ui, -apple-system, sans-serif
@@ -49,140 +52,41 @@
 
 <body class="bg-white text-gray-800 antialiased">
 
-  <header id="site-header"
+  <site-header id="site-header"
     class="fixed inset-x-0 top-0 z-50 bg-white -translate-y-full opacity-0 transition-all duration-300 ease-in-out">
-
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
-
-      <!-- Logo / Name -->
-      <div class="flex items-center gap-3">
-        <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-primary font-bold">
-          <img src="mr-image.jpg" alt="प्रोफ़ाइल" class="w-12 h-12 object-cover rounded-full" loading="lazy">
-        </div>
-        <div>
-          <h1>सुमित कुमार</h1>
-          <p class="text-sm text-black/80">
-            ग्राम प्रधान अभ्यर्थी — कौड़ारा बुजुर्ग
-          </p>
-        </div>
-      </div>
-
-      <!-- ================= DESKTOP NAV ================= -->
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-
-        <a href="#hero" class="text-gray-800 hover:text-green-700 font-medium">
-          मुख्य पृष्ठ
-        </a>
-
-        <a href="#about" class="text-gray-800 hover:text-green-700 font-medium">
-          परिचय
-        </a>
-
-        <a href="#education" class="text-gray-800 hover:text-green-700 font-medium">
-          शिक्षा पहल
-        </a>
-
-        <a href="#vision" class="text-gray-800 hover:text-green-700 font-medium">
-          विकास विज़न
-        </a>
-
-        <a href="#roadmap" class="text-gray-800 hover:text-green-700 font-medium">
-          रोडमैप
-        </a>
-
-        <!-- CTA -->
-        <a href="#contact"
-          class="ml-2 inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg shadow font-semibold">
-          संपर्क करें
-        </a>
-      </nav>
-
-      <!-- ================= MOBILE MENU BUTTON ================= -->
-      <div class="md:hidden">
-        <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="inline-flex items-center justify-center p-2 rounded-md
-               text-gray-800 bg-gray-100 hover:bg-gray-200">
-
-          <!-- OPEN ICON -->
-          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-
-          <!-- CLOSE ICON -->
-          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-
-        </button>
-      </div>
-
-      <!-- ================= MOBILE DROPDOWN MENU ================= -->
-      <div id="mobile-menu" class="mobile-menu hidden md:hidden absolute right-6 top-full mt-2
-             bg-white rounded-lg shadow-lg text-gray-800 w-52 py-2 z-40">
-
-        <a href="#hero" class="block px-4 py-2 hover:bg-gray-100">
-          मुख्य पृष्ठ
-        </a>
-
-        <a href="#about" class="block px-4 py-2 hover:bg-gray-100">
-          परिचय
-        </a>
-
-        <a href="#education" class="block px-4 py-2 hover:bg-gray-100">
-          शिक्षा पहल
-        </a>
-
-        <a href="#vision" class="block px-4 py-2 hover:bg-gray-100">
-          विकास विज़न
-        </a>
-
-        <a href="#roadmap" class="block px-4 py-2 hover:bg-gray-100">
-          रोडमैप
-        </a>
-
-        <a href="#contact" class="block mx-3 mt-2 text-center bg-green-600 text-white py-2 rounded-lg font-semibold">
-          संपर्क करें
-        </a>
-      </div>
-
-    </div>
-  </header>
-
+  </site-header>
 
   <main>
     <!-- Hero -->
     <section id="hero" class="relative bg-cover bg-center min-h-screen flex items-start sm:items-center pt-24 sm:pt-0"
       style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6b69b2c3d2b2e6d8f8c1b2d8d7b6c2d1');">
       <div class="absolute inset-0 bg-black/55"></div>
-
       <div class="relative z-10 w-full">
         <div class="max-w-6xl mx-auto px-6">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-
             <!-- Left: text -->
             <div
               class="order-2 lg:order-1 text-white text-center lg:text-left flex flex-col items-center lg:items-start mt-6 sm:mt-0">
               <p class="inline-block bg-amber-500 text-sm text-white px-3 py-1 rounded-full font-semibold">ग्राम पंचायत
-                — कौड़ारा बुजुर्ग</p>
+                — कौरारा बुजुर्ग</p>
               <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">सुमित कुमार</h1>
               <p class="text-2xl md:text-3xl lg:text-4xl mt-2 font-semibold text-amber-300">विकास और विश्वास</p>
-
               <p class="mt-6 text-base md:text-lg text-white/90 max-w-xl mx-auto lg:mx-0">
                 हमारा लक्ष्य केवल वादे करना नहीं, बल्कि समयबद्ध और ज़मीनी विकास करना है।
-                साफ़ पेयजल, पक्की सड़कें, किसानों की सुविधा, युवाओं के लिए शिक्षा
+                साफ़ पेयजल, पक्की गली/खरंजे, किसानों की सुविधा, युवाओं के लिए शिक्षा
                 और हर कार्य में पूर्ण पारदर्शिता — यही मेरी प्राथमिकताएँ हैं।
               </p>
-
-
               <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                <a href="tel:+919690946501"
-                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg shadow-lg">📞
-                  संपर्क दें</a>
-                <a href="https://wa.me/919690946501"
-                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-green-700 px-5 py-3 rounded-lg shadow">💬
-                  WhatsApp</a>
+                <a href="#events"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg shadow-lg">
+                  आगामी कार्यक्रम
+                </a>
+                <a href="about.html"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-green-700 px-5 py-3 rounded-lg shadow">
+                  मेरे बारे में
+                </a>
               </div>
             </div>
-
             <!-- Right: profile card -->
             <div class="order-1 lg:order-2 flex justify-center lg:justify-end mt-10 lg:mt-0">
               <div
@@ -192,14 +96,12 @@
                     <img src="mr-image.jpg" alt="प्रोफ़ाइल" class="w-full h-full object-cover" loading="lazy">
                   </div>
                 </div>
-
                 <div class="text-center mt-4 text-white">
                   <h3 class="text-xl font-semibold">सुमित कुमार</h3>
                   <p class="text-sm text-white/80">ग्राम प्रधान अभ्यर्थी</p>
                   <p class="mt-3 text-sm text-white/80">किसान परिवार से, गाँव की जड़ों से जुड़ा और विकास के लिए
                     प्रतिबद्ध।</p>
                 </div>
-
                 <div class="mt-6 grid grid-cols-3 gap-3 text-center">
                   <div class="p-3 bg-white/5 rounded-lg">
                     <div class="text-2xl">🌾</div>
@@ -216,11 +118,9 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
-
       <!-- wave divider -->
       <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-[0]">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-24 block">
@@ -229,583 +129,166 @@
       </div>
     </section>
 
-
-
-    <!-- About -->
-    <section id="about" class="max-w-6xl mx-auto px-6 py-12">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-
-
-        <div class="rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col">
-
-          <!-- Candidate Image -->
-          <div class="relative">
-            <img src="sumit-kumar.jpg" alt="सुमित कुमार — ग्राम प्रधान अभ्यर्थी" class="w-full h-64 object-cover"
-              loading="lazy">
-
-            <!-- Name strip -->
-            <div class="absolute bottom-0 inset-x-0 bg-black/60">
-              <p class="text-white text-sm font-semibold px-4 py-2">
-                सुमित कुमार — ग्राम प्रधान अभ्यर्थी
-              </p>
-            </div>
-          </div>
-
-          <!-- Content below image -->
-          <div class="p-6 flex-1 flex flex-col justify-between">
-
-            <div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-2">
-                आपके बीच का, आपके लिए
-              </h4>
-
-              <p class="text-sm text-gray-600 leading-relaxed">
-                मैं कोई बाहरी नेता नहीं हूँ।
-                मैं इसी गाँव का बेटा हूँ, आपके बीच पला-बढ़ा हूँ
-                और आपकी समस्याओं को अपनी समस्याएँ मानता हूँ।
-                ग्राम प्रधान के रूप में मेरा लक्ष्य
-                सिर्फ काम करना नहीं, बल्कि हर व्यक्ति का भरोसा जीतना है।
-              </p>
-            </div>
-
-            <!-- Personal Quote -->
-            <div class="mt-5 p-4 bg-green-50 border-l-4 border-green-600 rounded">
-              <p class="text-sm font-medium text-gray-800">
-                “मैं प्रधान बनने नहीं, गाँव की जिम्मेदारी उठाने आया हूँ।”
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">मेरा परिचय</h3>
-
-          <p class="text-gray-700 mb-4">
-            मैं एक विनम्र किसान परिवार से आता हूँ और बचपन से ही गाँव की वास्तविक
-            समस्याओं—पानी, सड़क, शिक्षा और रोजगार—को बहुत करीब से देखा है।
-            मेरे लिए ग्राम प्रधान बनना कोई पद नहीं, बल्कि गाँव की सेवा करने का अवसर है।
-          </p>
-
-          <p class="text-gray-700 mb-4">
-            मेरा विश्वास है कि अगर पंचायत ईमानदारी और पारदर्शिता से काम करे,
-            तो सरकारी योजनाओं का पूरा लाभ हर पात्र व्यक्ति तक पहुँच सकता है।
-            मैं किसी वर्ग, जाति या परिवार के लिए नहीं,
-            बल्कि पूरे गाँव के समान विकास के लिए काम करना चाहता हूँ।
-          </p>
-
-          <p class="text-gray-700">
-            एक स्थानीय निवासी होने के नाते मुझे गाँव की हर गली, हर खेत
-            और हर परिवार की स्थिति की समझ है।
-            यही समझ मुझे ज़मीन से जुड़े और व्यवहारिक निर्णय लेने की ताकत देती है।
-          </p>
-
-          <!-- Quote -->
-          <div class="mt-6 p-4 bg-green-50 border-l-4 border-green-600 rounded">
-            <p class="text-gray-800 font-medium">
-              “मेरा लक्ष्य ऐसा ग्राम प्रधान बनना है,
-              जिस पर गाँव का हर व्यक्ति गर्व कर सके।”
-            </p>
-          </div>
-        </div>
-
-
-
-
-      </div>
-    </section>
-
-
-    <!-- Education & Experience -->
-    <section id="education" class="bg-green-50 py-12">
+    <!-- ================= UPCOMING EVENTS ================= -->
+    <section id="events" class="bg-gray-50 py-12 border-t border-gray-100">
       <div class="max-w-6xl mx-auto px-6">
-
-        <!-- Heading -->
-        <div class="mb-8">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">
-            शिक्षा एवं अनुभव
-          </h3>
-          <p class="text-gray-700 max-w-3xl">
-            मेरा मानना है कि शिक्षा केवल डिग्री नहीं,
-            बल्कि समाज के लिए सही निर्णय लेने की समझ देती है।
-            मैंने अपने ज्ञान और अनुभव का उपयोग हमेशा
-            लोगों को आगे बढ़ाने के लिए किया है।
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-
-          <!-- Left: Education -->
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h4 class="text-lg font-semibold text-gray-900 mb-4">
-              🎓 शैक्षिक पृष्ठभूमि
-            </h4>
-
-            <ul class="space-y-4">
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <div>
-                  <p class="font-medium text-gray-800">
-                    कंप्यूटर एवं डिजिटल शिक्षा में प्रशिक्षण
-                  </p>
-                  <p class="text-sm text-gray-600">
-                    आधुनिक तकनीक और डिजिटल कार्यप्रणाली की व्यावहारिक समझ।
-                  </p>
-                </div>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <div>
-                  <p class="font-medium text-gray-800">
-                    शिक्षा को समाज सेवा से जोड़ने का अनुभव
-                  </p>
-                  <p class="text-sm text-gray-600">
-                    युवाओं और छात्रों को कौशल आधारित मार्गदर्शन।
-                  </p>
-                </div>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <div>
-                  <p class="font-medium text-gray-800">
-                    प्रशासनिक प्रक्रियाओं की समझ
-                  </p>
-                  <p class="text-sm text-gray-600">
-                    फॉर्म, रिकॉर्ड, ऑनलाइन पोर्टल और सरकारी योजनाओं की कार्यप्रणाली का अनुभव।
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Right: Experience -->
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h4 class="text-lg font-semibold text-gray-900 mb-4">
-              🧑‍💼 कार्य एवं सामाजिक अनुभव
-            </h4>
-
-            <ul class="space-y-4">
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <div>
-                  <p class="font-medium text-gray-800">
-                    MSK Institute की स्थापना
-                  </p>
-                  <p class="text-sm text-gray-600">
-                    ग्रामीण और कस्बाई छात्रों को सस्ती एवं गुणवत्तापूर्ण
-                    कंप्यूटर शिक्षा उपलब्ध कराने का प्रयास।
-                  </p>
-                </div>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <div>
-                  <p class="font-medium text-gray-800">
-                    युवाओं के साथ प्रत्यक्ष जुड़ाव
-                  </p>
-                  <p class="text-sm text-gray-600">
-                    शिक्षा, रोजगार और करियर को लेकर मार्गदर्शन का अनुभव।
-                  </p>
-                </div>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <div>
-                  <p class="font-medium text-gray-800">
-                    प्रशासनिक समझ और जिम्मेदारी
-                  </p>
-                  <p class="text-sm text-gray-600">
-                    योजनाओं, रिकॉर्ड और पारदर्शी कार्यप्रणाली की व्यावहारिक जानकारी।
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- Bottom Quote -->
-        <div class="mt-8 p-5 bg-white border-l-4 border-green-600 rounded shadow-sm max-w-4xl">
-          <p class="text-gray-800 font-medium">
-            “मेरी शिक्षा और अनुभव का उद्देश्य केवल व्यक्तिगत प्रगति नहीं,
-            बल्कि गाँव के हर युवा और हर परिवार को आगे बढ़ने का अवसर देना है।”
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- Education Initiative / Library Section -->
-    <section id="education" class="bg-white py-14">
-      <div class="max-w-6xl mx-auto px-6">
-
-        <!-- Heading -->
         <div class="text-center mb-10">
-          <h2 class="text-3xl font-bold text-gray-900">छात्रों के लिए शिक्षा पहल</h2>
-          <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-            मेरा विश्वास है कि मजबूत गाँव की नींव मजबूत शिक्षा से बनती है।
-            इसी सोच के साथ मैं गाँव के छात्रों के लिए एक अध्ययन लाइब्रेरी की शुरुआत करना चाहता हूँ।
-          </p>
+          <h2 class="text-3xl font-bold text-gray-900">🗓️ आगामी कार्यक्रम</h2>
+          <p class="mt-3 text-gray-600">जनसंपर्क और बैठकों का विवरण</p>
         </div>
-
-        <!-- Content Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-
-          <!-- Left Content -->
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              📚 ग्राम ज्ञान लाइब्रेरी (प्रस्तावित योजना)
-            </h3>
-
-            <ul class="space-y-4">
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <p class="text-gray-700">
-                  कक्षा 9 से 12 तक के छात्रों के लिए पाठ्य-पुस्तकें एवं संदर्भ सामग्री
-                </p>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <p class="text-gray-700">
-                  प्रतियोगी परीक्षाओं (SSC, Police, Army, Railway) की तैयारी हेतु पुस्तकें
-                </p>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <p class="text-gray-700">
-                  शांत वातावरण, उचित रोशनी, टेबल-कुर्सी और नियमित समय व्यवस्था
-                </p>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <p class="text-gray-700">
-                  आर्थिक रूप से कमजोर छात्रों के लिए निःशुल्क अध्ययन सुविधा
-                </p>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700">✓</span>
-                <p class="text-gray-700">
-                  भविष्य में करियर मार्गदर्शन एवं डिजिटल शिक्षा जोड़ने की योजना
-                </p>
-              </li>
-            </ul>
-
-            <!-- Quote -->
-            <div class="mt-6 p-4 bg-green-50 border-l-4 border-green-600 rounded">
-              <p class="text-gray-800 font-medium">
-                “हमारे गाँव का कोई भी बच्चा केवल सुविधा की कमी के कारण पीछे न रह जाए —
-                यही मेरी सबसे बड़ी प्राथमिकता है।”
-              </p>
-            </div>
+        <div class="overflow-hidden bg-white rounded-xl shadow-md border border-gray-100">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-green-700 text-white">
+                  <th class="p-4 border-b border-green-800 whitespace-nowrap">दिनांक</th>
+                  <th class="p-4 border-b border-green-800 whitespace-nowrap">समय</th>
+                  <th class="p-4 border-b border-green-800 whitespace-nowrap">स्थान</th>
+                  <th class="p-4 border-b border-green-800 whitespace-nowrap">शीर्षक</th>
+                </tr>
+              </thead>
+              <tbody id="events-table-body" class="text-gray-700">
+                <tr>
+                  <td colspan="4" class="p-8 text-center text-gray-500">लोड हो रहा है...</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-
-          <!-- Right Card -->
-          <div class="bg-green-50 rounded-2xl p-8 shadow-md">
-            <h4 class="text-lg font-semibold text-gray-800 mb-4 text-center">
-              🎓 यह पहल किसके लिए लाभकारी होगी?
-            </h4>
-
-            <div class="grid grid-cols-2 gap-4 text-center">
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="text-3xl mb-2">📖</div>
-                <p class="text-sm font-medium text-gray-700">स्कूल छात्र</p>
-              </div>
-
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="text-3xl mb-2">🧑‍🎓</div>
-                <p class="text-sm font-medium text-gray-700">युवा वर्ग</p>
-              </div>
-
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="text-3xl mb-2">👩‍🎓</div>
-                <p class="text-sm font-medium text-gray-700">छात्राएँ</p>
-              </div>
-
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="text-3xl mb-2">🌱</div>
-                <p class="text-sm font-medium text-gray-700">भविष्य निर्माता</p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        const tbody = document.getElementById('events-table-body');
+        try {
+          const response = await fetch('data/events.json');
+          const events = await response.json();
 
-    <!-- ================= STUDENT FREE COURSE SCHEME ================= -->
-    <section class="bg-green-50 py-16">
+          if (events && events.length > 0) {
+            tbody.innerHTML = events.map(event => `
+              <tr class="border-b hover:bg-green-50 transition-colors">
+                <td class="p-4 font-medium">${event.date}</td>
+                <td class="p-4">${event.time}</td>
+                <td class="p-4">${event.location}</td>
+                <td class="p-4">${event.title}</td>
+              </tr>
+            `).join('');
+          } else {
+            tbody.innerHTML = '<tr><td colspan="4" class="p-8 text-center text-gray-500">कोई आगामी कार्यक्रम नहीं है।</td></tr>';
+          }
+        } catch (error) {
+          console.error('Error fetching events:', error);
+          tbody.innerHTML = '<tr><td colspan="4" class="p-8 text-center text-red-500">डेटा लोड करने में त्रुटि हुई।</td></tr>';
+        }
+      });
+    </script>
+
+
+
+    <!-- ================= COMMUNITY VOICES ================= -->
+    <section id="voices" class="py-16 bg-white relative">
       <div class="max-w-6xl mx-auto px-6">
-
-        <!-- Heading -->
-        <div class="text-center mb-10">
-          <h2 class="text-3xl font-bold text-gray-900">
-            छात्रों के लिए विशेष कंप्यूटर शिक्षा योजना
-          </h2>
-          <p class="mt-3 text-gray-600 max-w-3xl mx-auto">
-            गाँव के छात्रों को डिजिटल रूप से सशक्त बनाने हेतु निःशुल्क कंप्यूटर शिक्षा की पहल।
-          </p>
-          <p class="mt-3 text-gray-600 max-w-3xl mx-auto">
-            <strong>Note: </strong>
-            ⚠️ यह योजना केवल ग्राम पंचायत कौड़ारा बुजुर्ग के
-            स्थायी निवासियों के लिए प्रस्तावित है।
-            चयन पूरी तरह मेरिट और पारदर्शिता के आधार पर होगा।
-          </p>
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">📣 गाँव की आवाज़</h2>
+          <p class="mt-2 text-gray-600">हमारे समर्थक क्या कहते हैं</p>
         </div>
-
-        <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          <!-- 10th Pass -->
-          <div class="bg-white p-8 rounded-2xl shadow text-center">
-            <div class="text-5xl mb-4">💻</div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">
-              10वीं पास छात्रों के लिए
-            </h3>
-
-            <p class="text-gray-700 mb-2">
-              <strong>3 महीने का निःशुल्क CCC कंप्यूटर कोर्स</strong>
-            </p>
-
-            <p class="text-sm text-red-600 font-semibold mb-4">
-              (न्यूनतम 60% परीक्षा परिणाम अनिवार्य)
-            </p>
-
-            <ul class="text-sm text-gray-600 space-y-2 text-left max-w-sm mx-auto">
-              <li>✔ कंप्यूटर की मूल अवधारणाएँ</li>
-              <li>✔ MS Word, Excel, PowerPoint</li>
-              <li>✔ इंटरनेट, ई-मेल एवं डिजिटल सेवाएँ</li>
-              <li>✔ आगे की पढ़ाई हेतु मजबूत डिजिटल आधार</li>
-            </ul>
-          </div>
-
-          <!-- 12th Pass -->
-          <div class="bg-white p-8 rounded-2xl shadow text-center">
-            <div class="text-5xl mb-4">🎓</div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">
-              12वीं पास छात्रों के लिए
-            </h3>
-
-            <p class="text-gray-700 mb-2">
-              <strong>6 महीने का उन्नत CCC कंप्यूटर कोर्स — निःशुल्क</strong>
-            </p>
-
-            <p class="text-sm text-red-600 font-semibold mb-4">
-              (न्यूनतम 50% परीक्षा परिणाम अनिवार्य)
-            </p>
-
-            <ul class="text-sm text-gray-600 space-y-2 text-left max-w-sm mx-auto">
-              <li>✔ एडवांस कंप्यूटर एवं डिजिटल स्किल्स</li>
-              <li>✔ ऑफिस ऑटोमेशन एवं ऑनलाइन कार्य</li>
-              <li>✔ सरकारी व निजी नौकरियों हेतु उपयोगी ज्ञान</li>
-              <li>✔ आत्मनिर्भर बनने की डिजिटल तैयारी</li>
-            </ul>
-          </div>
-
-
-        </div>
-
-        <!-- Bottom Quote -->
-        <div class="mt-10 p-5 bg-white border-l-4 border-green-600 rounded shadow-sm max-w-4xl mx-auto text-center">
-          <p class="text-gray-800 font-medium">
-            “मेरी प्राथमिकता यह है कि गाँव का हर योग्य छात्र
-            डिजिटल शिक्षा से जुड़कर आत्मनिर्भर बने।”
-            <br>
-            <span class="text-green-700 font-semibold">— सुमित कुमार</span>
-          </p>
-        </div>
-
-
-      </div>
-    </section>
-
-    <!-- PARENTS MESSAGE -->
-    <section class="py-14 text-center">
-      <h2 class="text-2xl font-bold mb-4">अभिभावकों के नाम संदेश</h2>
-      <p class="max-w-3xl mx-auto text-gray-700">
-        हर माता-पिता का सपना होता है कि उसका बच्चा आगे बढ़े।
-        मैं चाहता हूँ कि हमारा गाँव शिक्षा के क्षेत्र में मिसाल बने।
-        <br><br>
-        <strong class="text-green-700">— सुमित कुमार</strong>
-      </p>
-    </section>
-
-    <!-- ================= GALLERY ================= -->
-    <section class="py-16 max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">ग्राम जीवन</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="group relative overflow-hidden rounded-lg shadow-md aspect-video bg-gray-200">
-          <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">तस्वीर 1</div>
-          <div
-            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-semibold">जनसंपर्क अभियान</p>
+        <div id="home-reviews-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Reviews will be loaded here via JS -->
+          <div class="col-span-full text-center py-12 text-gray-500">
+            समीक्षाएं लोड हो रही हैं... <span class="loading-dots">...</span>
           </div>
         </div>
-        <div class="group relative overflow-hidden rounded-lg shadow-md aspect-video bg-gray-200">
-          <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">तस्वीर 2</div>
-          <div
-            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-semibold">विकास कार्य</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-lg shadow-md aspect-video bg-gray-200">
-          <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">तस्वीर 3</div>
-          <div
-            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-semibold">युवा संवाद</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-lg shadow-md aspect-video bg-gray-200">
-          <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">तस्वीर 4</div>
-          <div
-            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-            <p class="text-white text-sm font-semibold">ग्राम सभा बैठक</p>
-          </div>
+
+        <div class="mt-10 text-center">
+          <a href="reviews.html"
+            class="inline-flex items-center gap-2 bg-white text-green-700 border border-green-200 px-6 py-2.5 rounded-full font-semibold hover:bg-green-50 transition shadow-sm">
+            अधिक समीक्षाएं देखें (View All)
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- Script to load Home Reviews -->
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        const grid = document.getElementById('home-reviews-grid');
+        if (!grid) return;
+
+        try {
+          const response = await fetch('data/reviews.json');
+          if (!response.ok) throw new Error('Data load failed');
+          const reviews = await response.json();
+
+          // Take only first 3 reviews for home page
+          const topReviews = reviews.slice(0, 3);
+
+          grid.innerHTML = ''; // Clear loading
+
+          topReviews.forEach(review => {
+            const card = document.createElement('div');
+            card.className = 'p-6 bg-gray-50 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full';
+
+            const colors = {
+              green: 'text-green-700 bg-green-200',
+              blue: 'text-blue-700 bg-blue-200',
+              pink: 'text-pink-700 bg-pink-200',
+              purple: 'text-purple-700 bg-purple-200',
+              yellow: 'text-yellow-700 bg-yellow-200',
+              indigo: 'text-indigo-700 bg-indigo-200'
+            };
+            const colorClass = colors[review.avatar_color] || colors.green;
+
+            card.innerHTML = `
+                     <div class="text-4xl text-green-200 mb-4 font-serif">❝</div>
+                     <p class="text-gray-700 italic mb-6 relative z-10 flex-grow">
+                       "${review.text}"
+                     </p>
+                     <div class="flex items-center gap-3 mt-auto">
+                       <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold ${colorClass}">
+                         ${review.avatar_char}
+                       </div>
+                       <div>
+                         <h4 class="font-bold text-gray-900">${review.name}</h4>
+                         <p class="text-xs text-gray-500">${review.role}</p>
+                       </div>
+                     </div>
+                  `;
+            grid.appendChild(card);
+          });
+
+        } catch (err) {
+          console.error(err);
+          grid.innerHTML = '<div class="col-span-full text-center text-red-500">Samyasya ayi.</div>';
+        }
+      });
+    </script>
+    </div>
+    </section>
 
     <!-- ================= PROMISE ================= -->
-    <section class="py-16 text-center">
+    <section class="py-16 text-center bg-green-50">
       <h2 class="text-2xl font-bold mb-4">ईमानदारी प्रतिज्ञा</h2>
-      <p class="max-w-2xl mx-auto">
+      <p class="max-w-2xl mx-auto text-gray-700 px-6">
         मैं वादा करता हूँ कि पंचायत की हर योजना बिना भेदभाव और पूरी पारदर्शिता से लागू होगी। और पंचायत का हर निर्णय, हर
         खर्च और हर योजना जनता की जानकारी में और जनता के हित में होगी।
       </p>
     </section>
 
-
-    <!-- ================= VOLUNTEER FORM (New Content) ================= -->
-    <section id="join" class="py-16 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center mb-10">
-          <span class="bg-green-100 text-green-700 font-semibold px-3 py-1 rounded-full text-sm">मुहीम से जुड़ें</span>
-          <h2 class="text-3xl font-bold text-gray-900 mt-2">स्वयंसेवक बनें (Volunteer)</h2>
-          <p class="mt-3 text-gray-600">
-            गाँव के विकास में अपना योगदान दें। हमारे चुनाव अभियान का हिस्सा बनें।
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-          <form
-            onsubmit="event.preventDefault(); alert('धन्यवाद! आपकी जानकारी दर्ज कर ली गई है। हम जल्द ही आपसे संपर्क करेंगे।');"
-            class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-              <!-- Name -->
-              <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">पूरा नाम</label>
-                <input type="text" id="name" required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
-                  placeholder="आपका नाम">
-              </div>
-
-              <!-- Phone -->
-              <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">मोबाइल नंबर</label>
-                <input type="tel" id="phone" required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
-                  placeholder="98765xxxxx">
-              </div>
-            </div>
-
-            <!-- Village/Ward -->
-            <div>
-              <label for="ward" class="block text-sm font-medium text-gray-700 mb-1">वार्ड / मोहल्ला</label>
-              <input type="text" id="ward"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
-                placeholder="आपके मोहल्ले का नाम">
-            </div>
-
-            <!-- Message -->
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">सुझाव या संदेश
-                (वैकल्पिक)</label>
-              <textarea id="message" rows="3"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
-                placeholder="आप किस प्रकार सहयोग करना चाहते हैं?"></textarea>
-            </div>
-
-            <!-- Submit Button -->
-            <div class="text-center">
-              <button type="submit"
-                class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold shadow-md transition-all hover:shadow-lg w-full sm:w-auto">
-                शामिल हों
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-            </div>
-
-            <p class="text-xs text-center text-gray-500 mt-4">
-              आपकी जानकारी सुरक्षित रहेगी और केवल अभियान के लिए उपयोग की जाएगी।
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-
     <!-- ================= CTA ================= -->
-    <section class="bg-green-700 text-white py-16 text-center">
+    <section class="bg-primary text-white py-16 text-center">
       <h2 class="text-3xl font-bold mb-4">गाँव का भविष्य आपके हाथ में है</h2>
       <p class="mb-6">मेरे साथ जुड़िए और विकास का हिस्सा बनिए</p>
-      <a href="https://wa.me/919690946501" class="bg-white text-green-700 px-8 py-3 rounded-lg font-bold">
+      <a href="contact.html" class="bg-white text-green-700 px-8 py-3 rounded-lg font-bold">
         अभी जुड़ें
       </a>
     </section>
 
-
-    <!-- Contact -->
-    <section id="contact" class="max-w-6xl mx-auto px-6 py-12">
-      <h3 class="text-2xl font-semibold text-gray-900 mb-4">संपर्क करें और जुड़ें</h3>
-      <p class="text-gray-700 mb-6">आपके सुझाव और समर्थन हमारे लिए महत्वपूर्ण हैं। किसी भी समस्या या सुझाव के लिए आप
-        हमसे कभी भी संपर्क कर सकते हैं।</p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <a href="tel:+919690946501" class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
-          <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center">📞</div>
-          <div>
-            <p class="text-sm text-gray-500">फोन करें</p>
-            <p class="font-semibold text-gray-800">+91 9690946501</p>
-          </div>
-        </a>
-
-        <a href="https://wa.me/919690946501" class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
-          <div class="w-12 h-12 rounded-full bg-green-50 text-green-600 flex items-center justify-center">💬</div>
-          <div>
-            <p class="text-sm text-gray-500">WhatsApp</p>
-            <p class="font-semibold text-gray-800">हमें संदेश भेजें</p>
-          </div>
-        </a>
-
-        <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
-          <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">🌾</div>
-          <div>
-            <p class="text-sm text-gray-500">चुनाव चिह्न</p>
-            <p class="font-semibold text-gray-800">अनाज ओसला किसान</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- FOOTER -->
-    <footer class="bg-gray-900 text-gray-300 py-8 text-center">
-      <p class="font-semibold text-green-400">सुमित कुमार — ग्राम प्रधान प्रत्याशी</p>
-      <p class="text-sm">ग्राम पंचायत कौड़ारा बुजुर्ग, जसराना, फिरोजाबाद</p>
-      <p class="text-xs mt-4">© 2025 चुनाव अभियान</p>
-    </footer>
+    <site-footer></site-footer>
 
   </main>
 
@@ -816,11 +299,9 @@
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) {
-          // Hero खत्म होते ही header दिखे
           header.classList.remove('-translate-y-full', 'opacity-0');
           header.classList.add('translate-y-0', 'opacity-100');
         } else {
-          // Hero दिख रहा है → header छुपा रहे
           header.classList.add('-translate-y-full', 'opacity-0');
           header.classList.remove('translate-y-0', 'opacity-100');
         }
@@ -831,76 +312,9 @@
     );
 
     observer.observe(hero);
-
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const iconOpen = document.getElementById('icon-open');
-    const iconClose = document.getElementById('icon-close');
-    const body = document.body;
-
-    function openMenu() {
-      menu.classList.remove('hidden');
-      setTimeout(() => menu.classList.add('show'), 10);
-
-      iconOpen.classList.add('hidden');
-      iconClose.classList.remove('hidden');
-
-      body.classList.add('no-scroll');
-      menuBtn.setAttribute('aria-expanded', 'true');
-    }
-
-    function closeMenu() {
-      menu.classList.remove('show');
-
-      setTimeout(() => {
-        menu.classList.add('hidden');
-      }, 250);
-
-      iconOpen.classList.remove('hidden');
-      iconClose.classList.add('hidden');
-
-      body.classList.remove('no-scroll');
-      menuBtn.setAttribute('aria-expanded', 'false');
-    }
-
-    /* Toggle button */
-    menuBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      menu.classList.contains('show') ? closeMenu() : openMenu();
-    });
-
-    /* Outside click close */
-    document.addEventListener('click', (e) => {
-      if (
-        menu.classList.contains('show') &&
-        !menu.contains(e.target) &&
-        !menuBtn.contains(e.target)
-      ) {
-        closeMenu();
-      }
-    });
-
-    /* Link click → close menu */
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
   </script>
 
-
-  <!-- ================= FLOATING ACTION BUTTONS ================= -->
-  <!-- Call Button (Left) -->
-  <a href="tel:+919690946501"
-    class="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-full shadow-lg transition-transform hover:scale-105">
-    <span class="text-xl">📞</span>
-    <span class="hidden md:inline font-medium">कॉल करें</span>
-  </a>
-
-  <!-- WhatsApp Button (Right) -->
-  <a href="https://wa.me/919690946501" target="_blank"
-    class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg transition-transform hover:scale-105">
-    <span class="text-xl">💬</span>
-    <span class="hidden md:inline font-medium">WhatsApp</span>
-  </a>
+  <floating-buttons></floating-buttons>
 
 </body>
 
